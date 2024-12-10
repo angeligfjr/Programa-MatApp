@@ -1,0 +1,156 @@
+#include <iostream>
+#include <cmath>
+
+// Funciones matemáticas
+double suma(double a, double b) {
+    return a + b;
+}
+
+double resta(double a, double b) {
+    return a - b;
+}
+
+double multiplicacion(double a, double b) {
+    return a * b;
+}
+
+double division(double a, double b) {
+    return a / b;
+}
+
+double elevarAlCuadrado(double a) {
+    return pow(a, 2);
+}
+
+double elevarAlCubo(double a) {
+    return pow(a, 3);
+}
+double calcularAreaCuadrado(double a, double b) {
+    return a * b;
+}
+double calcularAreaTriangulo(double a, double b) {
+    return a * b / 2;
+}
+double calcularAreaRectangulo(double a, double b) {
+    return a * b;
+}
+
+// Funciones físicas
+double calcularVelocidad(double distancia, double tiempo) {
+    return distancia / tiempo;
+}
+
+double calcularTiempo(double distancia, double velocidad) {
+    return distancia / velocidad;
+}
+
+double calcularDistancia(double velocidad, double tiempo) {
+    return velocidad * tiempo;
+}
+using namespace std;
+int main() {
+    int opcion;
+    double a, b, distancia, velocidad, tiempo;
+
+    do {
+        cout << "Menú:" <<endl;
+        cout << "1. Suma" <<endl;
+        cout << "2. Resta" <<endl;
+        cout << "3. Multiplicación" <<endl;
+        cout << "4. División" <<endl;
+        cout << "5. Elevar al cuadrado" <<endl;
+        cout << "6. Elevar al cubo" <<endl;
+        cout << "7. cal. area de cuadrado" <<endl;
+        cout << "8. cal. area de triangulo" <<endl;
+        cout << "9. cal. area de rectangulo" <<endl;
+        cout << "10. Calcular velocidad" <<endl;
+        cout << "11. Calcular tiempo" <<endl;
+        cout << "12. Calcular distancia" <<endl;
+        cout << "13. Salir" <<endl;
+        cout << "Ingrese su opción: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1:
+                cout << "Ingrese el primer número: "<<endl;
+                cin >> a;
+                cout << "Ingrese el segundo número: "<<endl;
+                cin >> b;
+                cout << "La suma es: " << suma(a, b) <<endl;
+                break;
+            case 2:
+                cout << "Ingrese el primer número: "<<endl;
+                cin >> a;
+                cout << "Ingrese el segundo número: "<<endl;
+                cin >> b;
+                cout << "La resta es: " << resta(a, b) <<endl;
+                break;
+            case 3:
+                cout << "Ingrese el primer número: "<<endl;
+                cin >> a;
+                cout << "Ingrese el segundo número: "<<endl;
+                cin >> b;
+                cout << "La multiplicación es: " << multiplicacion(a, b) <<endl;
+                break;
+            case 4:
+                cout << "Ingrese el primer número: "<<endl;
+                cin >> a;
+                cout << "Ingrese el segundo número: ";
+                cin >> b;
+                cout << "La división es: " << division(a, b) <<endl;
+                break;
+            case 5:
+                cout << "Ingrese un número: "<<endl;
+                cin >> a;
+                cout << "El cuadrado del número es: " << elevarAlCuadrado(a) <<endl;
+                break;
+            case 6:
+                cout << "Ingrese un número: "<<endl;
+                cin >> a;
+                cout << "El cubo del número es: " << elevarAlCubo(a) <<endl;
+                break;
+            case 7:
+                cout << "ingrese el primer lado del cuadrado"<<endl;
+                cin >> a;
+                cout << "ingrese el segundo lado del cuadrado"<<endl;
+                cin >> b;
+                cout << "el area del cuadrado es: "<<calcularAreaCuadrado(a,b)<<endl;
+                break;
+            case 8:
+                cout << "ingrese la base del triangulo"<<endl;
+                cin >> a;
+                cout << "ingrese la altura del triangulo"<<endl;
+                cin >> b;
+                cout << "el area del triangulo es: "<<calcularAreaTriangulo(a,b)<<endl;
+                break;
+            case 9:
+                cout << " ingrese el largo del rectangulo"<<endl;
+                cin >> a;
+                cout << " ingrese el ancho del rectangulo"<<endl;
+                cin >> b;
+                cout << "el area del rectangulo es: "<< calcularAreaRectangulo(a,b)<<endl;
+                break;
+            case 10:
+                cout << "Ingrese la distancia: "<<endl;
+                cin >> distancia;
+                cout << "Ingrese el tiempo: "<<endl;
+                cin >> tiempo;
+                cout << "La velocidad es: " << calcularVelocidad(distancia, tiempo) <<endl;
+                break;
+            case 11:
+                cout << "Ingrese la distancia: "<<endl;
+                cin >> distancia;
+                cout << "Ingrese la velocidad: "<<endl;
+                cin >> velocidad;
+                cout << "El tiempo es: " << calcularTiempo(distancia, velocidad) <<endl;
+                break;
+            case 12:
+                cout << "Ingrese la velocidad: "<<endl;
+                cin>>velocidad;
+                cout<<"ingrese el tiempo: "<<endl;
+                cin>>tiempo;
+                cout<<"La distancia es: "<<calcularDistancia(velocidad, tiempo)<<endl;
+}
+}while(opcion!=10);
+return 0;
+}
